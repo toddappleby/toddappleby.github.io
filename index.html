@@ -8,8 +8,13 @@
     <meta charset="utf-8" />
     <script>
     function setup() {
-      pixelDensity(1);
+      
       createCanvas(windowWidth,windowHeight)
+
+      const displayRatio = windowWidth / windowHeight;
+      pg = createGraphics(100 * displayRatio, 100);
+      pg.noSmooth();
+      noSmooth();
     }
 
     function draw() {
